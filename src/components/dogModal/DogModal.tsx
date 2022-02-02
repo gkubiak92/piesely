@@ -16,7 +16,7 @@ export const DogModal = ({
         isLoading ? (
           <div>LOADING...</div>
         ) : (
-          <img src={data?.message} alt={title} />
+          <img src={data?.message} alt={title} className="max-h-full" />
         )
       }
       onClose={onClose}

@@ -19,6 +19,9 @@ const getRandomImageByBreed = (breed: string, subBreed?: string) => {
 
 export const useGetRandomImageByBreed = (breed: string, subBreed?: string) =>
   useQuery<GetRandomImageByBreedResponse>(
-    `${subBreed}SubBreedRandomImage`,
-    () => getRandomImageByBreed(breed, subBreed)
+    `${breed}${subBreed ? subBreed : ''}`,
+    () => getRandomImageByBreed(breed, subBreed),
+    {
+      cacheTime: 0,
+    }
   );
