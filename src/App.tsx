@@ -1,12 +1,12 @@
 import React from 'react';
 import { ClientProvider } from 'providers/clientProvider/ClientProvider';
-import { BreedList } from 'app/BreedList/BreedList';
+import { BreedListContainer } from 'app/BreedList/BreedListContainer';
 
 function App() {
   return (
     <ClientProvider>
       <h1>PIESEŁY</h1>
-      <BreedList />
+      <BreedListContainer />
     </ClientProvider>
   );
 }
