@@ -3,3 +3,8 @@ export type GetBreedsResponse = {
     [key: string]: string[];
   };
 };
+
+export type GetRandomImageByBreedResponse = {
+  message: string;
+  status: string;
+};

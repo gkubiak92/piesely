@@ -1,7 +1,11 @@
 import { BreedButton } from 'components/breedButton/BreedButton';
 import { BreedListProps } from 'app/BreedList/BreedList.types';
 
-export const BreedList = ({ isLoading, breeds }: BreedListProps) => {
+export const BreedList = ({
+  isLoading,
+  breeds,
+  onBreedClick,
+}: BreedListProps) => {
   if (isLoading) return <div>LOADING...</div>;
 
   if (!breeds) return <div>No results</div>;
@@ -16,7 +20,7 @@ export const BreedList = ({ isLoading, breeds }: BreedListProps) => {
               <BreedButton
                 key={name}
                 name={name}
-                onClick={() => console.log(subBreed, breed)}
+                onClick={() => onBreedClick(breed, subBreed)}
                 className="m-2"
               />
             );
@@ -26,7 +30,7 @@ export const BreedList = ({ isLoading, breeds }: BreedListProps) => {
             key={breed}
             name={breed}
             onClick={() => {
-              console.log(breed);
+              onBreedClick(breed);
             }}
             className="m-2"
           />

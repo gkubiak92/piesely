@@ -5,8 +5,10 @@ import { BreedListContainer } from 'app/BreedList/BreedListContainer';
 function App() {
   return (
     <ClientProvider>
-      <h1>PIESEŁY</h1>
-      <BreedListContainer />
+      <h1 className="text-center text-4xl font-bold">DOGS</h1>
+      <div className="p-4">
+        <BreedListContainer />
+      </div>
     </ClientProvider>
   );
 }
