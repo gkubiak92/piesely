@@ -21,7 +21,7 @@ export const BreedList = ({
                 key={name}
                 name={name}
                 onClick={() => onBreedClick(breed, subBreed)}
-                className="m-2"
+                className="m-2 capitalize"
               />
             );
           })
@@ -32,7 +32,7 @@ export const BreedList = ({
             onClick={() => {
               onBreedClick(breed);
             }}
-            className="m-2"
+            className="m-2 capitalize"
           />
         )
       )}
